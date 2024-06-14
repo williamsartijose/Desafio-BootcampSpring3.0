@@ -14,9 +14,7 @@ O projeto deverá estar com um ambiente de testes configurado acessando o banco 
 Um cliente possui nome, CPF, renda, data de nascimento, e quantidade de filhos. A especificação da entidade Client é mostrada a seguir (você deve seguir à risca os nomes de classe e atributos mostrados no diagrama):
 
 
-
-
-
+![Web 0](https://github.com/williamsartijose/Desafio-BootcampSpring3.0/blob/main/Backend/img/Captura%20de%20tela%202024-06-14%20011606.png)
 
 Seu projeto deverá fazer um seed de pelo menos 10 clientes com dados SIGNIFICATIVOS (não é para usar dados sem significado como “Nome 1”, “Nome 2”, etc.).
 

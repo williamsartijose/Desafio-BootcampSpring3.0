@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdb20d7f-9e66-403f-a2f0-e808ee2a18bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Backend/img/Captura de tela 2024-06-14 011606.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Projetos Spring Tools 4/1- Desafio Bootcamp Spring 3.0/bootcampspring"
+    "last_opened_file_path": "C:/Projetos Spring Tools 4/1- Desafio Bootcamp Spring 3.0/bootcampspring/Backend"
   }
 }]]></component>
   <component name="RecentsManager">
