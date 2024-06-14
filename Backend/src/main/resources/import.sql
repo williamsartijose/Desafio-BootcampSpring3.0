@@ -27,4 +27,3 @@ INSERT INTO tb_client (name, cpf, income, birth_Date, children, created_At, upda
 INSERT INTO tb_client (name, cpf, income, birth_Date, children, created_At, updated_At) VALUES ('Laura Morgan', '67890098760', 6200.0, '1993-08-08T05:45:00Z', 0, NOW(), NOW());
 INSERT INTO tb_client (name, cpf, income, birth_Date, children, created_At, updated_At) VALUES ('Oscar Turner', '78901098760', 4900.0, '1985-01-30T14:15:00Z', 3, NOW(), NOW());
 INSERT INTO tb_client (name, cpf, income, birth_Date, children, created_At, updated_At) VALUES ('Penny Collins', '89012098760', 5300.0, '1989-03-15T10:45:00Z', 1, NOW(), NOW());
-INSERT INTO tb_client (name, cpf, income, birth_Date, children, created_At, updated_At) VALUES ('Aaron Evans', '90123098760', 7700.0, '1979-09-03T22:00:00
