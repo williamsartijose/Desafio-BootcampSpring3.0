@@ -4,6 +4,7 @@ import com.wsj.bootcampspring.dto.ClientDTO;
 import com.wsj.bootcampspring.entities.Client;
 import com.wsj.bootcampspring.repositories.ClientRepository;
 import com.wsj.bootcampspring.services.exceptions.ClientNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -47,5 +48,17 @@ public class ClientService {
         client.setIncome(clientDto.getIncome());
         client.setBirthDate(clientDto.getBirthDate());
         client.setChildren(clientDto.getChildren());
+    }
+
+    @Transactional
+    public ClientDTO update(Long id, ClientDTO clientDto) {
+        try {
+            Client client = clientRepository.getReferenceById(id);
+            copyDtoToEntity(clientDto, client);
+            client = clientRepository.save(client);
+            return new ClientDTO(client);
+        } catch (EntityNotFoundException c) {
+            throw new ClientNotFoundException(CLIENT_NOT_FOUND);
+        }
     }
 }
