@@ -8,6 +8,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import java.net.URI;
 
 @RestController
 @RequestMapping(value = "/clients")
@@ -32,6 +35,14 @@ public class ClientController {
     public ResponseEntity<ClientDTO> findById(@PathVariable Long id) {
         ClientDTO clientDto = clientService.findById(id);
         return ResponseEntity.ok().body(clientDto);
+    }
+
+    @PostMapping
+    public ResponseEntity<ClientDTO> create(@RequestBody ClientDTO clientDto) {
+        clientDto = clientService.create(clientDto);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+                .buildAndExpand(clientDto.getId()).toUri();
+        return ResponseEntity.created(uri).body(clientDto);
     }
 
 }

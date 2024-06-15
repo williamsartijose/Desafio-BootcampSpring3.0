@@ -32,4 +32,20 @@ public class ClientService {
         Client client = cli.orElseThrow(() -> new ClientNotFoundException(CLIENT_NOT_FOUND));
         return new ClientDTO(client);
     }
+
+    @Transactional
+    public ClientDTO create(ClientDTO clientDto) {
+        Client client = new Client();
+        copyDtoToEntity(clientDto, client);
+        client = clientRepository.save(client);
+        return new ClientDTO(client);
+    }
+
+    private void copyDtoToEntity(ClientDTO clientDto, Client client) {
+        client.setName(clientDto.getName());
+        client.setCpf(clientDto.getCpf());
+        client.setIncome(clientDto.getIncome());
+        client.setBirthDate(clientDto.getBirthDate());
+        client.setChildren(clientDto.getChildren());
+    }
 }
